@@ -1,5 +1,12 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import store from './store';
-import { addArticle } from './actions';
+import App from './Components/App';
 
-window.store = store;
-window.addArticle = addArticle;
+ReactDOM.render(
+    <Provider store={store}>
+        <App></App>
+    </Provider>,
+    document.querySelector('#root')
+);
