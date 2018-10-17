@@ -1,2 +1,5 @@
+import store from './store';
+import { addArticle } from './actions';
 
-console.log('¡Hola mundo!');
+window.store = store;
+window.addArticle = addArticle;
